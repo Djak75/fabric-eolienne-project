@@ -1,25 +1,18 @@
-# 🌬️ Pipeline de Données - Analyse Production Éolienne
+# Pipeline de Données - Analyse Production Éolienne 🌬️
 
-> Projet de pipeline de données end-to-end avec **Microsoft Fabric** utilisant l'architecture **Medallion** (Bronze/Silver/Gold)
+Projet de pipeline de données avec Microsoft Fabric utilisant l'architecture Medallion (Bronze/Silver/Gold).
 
-[![Microsoft Fabric](https://img.shields.io/badge/Microsoft_Fabric-0078D4?style=flat&logo=microsoft&logoColor=white)](https://fabric.microsoft.com)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat&logo=apache-spark&logoColor=white)](https://spark.apache.org/)
-[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=power-bi&logoColor=black)](https://powerbi.microsoft.com/)
+## Vue d'ensemble
 
----
+Ce projet permet d'analyser la production d'énergie de turbines éoliennes en utilisant Microsoft Fabric. L'idée est de créer un pipeline complet qui va de l'ingestion des données brutes jusqu'à la visualisation dans Power BI.
 
-## 📋 Vue d'ensemble
+### Objectifs
 
-Ce projet implémente un **pipeline de données complet** pour analyser la production d'énergie de turbines éoliennes. Il utilise l'architecture **Medallion** (Bronze → Silver → Gold) et l'écosystème Microsoft Fabric.
-
-### 🎯 Objectifs du projet
-
-- ✅ Ingérer des données de production éolienne depuis GitHub
-- ✅ Nettoyer et transformer les données avec PySpark/SQL
-- ✅ Créer un modèle dimensionnel (Star Schema)
-- ✅ Orchestrer le pipeline avec Data Factory
-- ✅ Visualiser les résultats dans Power BI
+- Ingérer des données de production éolienne depuis GitHub
+- Nettoyer et transformer les données avec PySpark/SQL
+- Créer un modèle dimensionnel (Star Schema)
+- Orchestrer le pipeline avec Data Factory
+- Visualiser les résultats dans Power BI
 
 ### 📊 Données analysées
 
@@ -71,35 +64,19 @@ Les données proviennent de plusieurs turbines éoliennes et incluent :
 
 ---
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 fabric-eolienne-project/
-├── README.md                      # 📖 Documentation principale (ce fichier)
-├── .gitignore                     # 🚫 Fichiers à ignorer
-│
-├── notebooks/                     # 📓 Notebooks Jupyter
+├── README.md
+├── .gitignore
+├── notebooks/                     # Notebooks Jupyter
 │   ├── bronze/                    # Ingestion des données
-│   │   ├── ingestion_bronze.ipynb
-│   │   └── README.md
-│   ├── silver/                    # Transformations Silver
-│   │   ├── bronze_to_silver_pyspark.ipynb
-│   │   ├── bronze_to_silver_sql.ipynb
-│   │   └── README.md
-│   └── gold/                      # Transformations Gold
-│       ├── silver_to_gold_dimensions.ipynb
-│       ├── silver_to_gold_facts.ipynb
-│       └── README.md
-│
-├── docs/                          # 📚 Documentation
-│   ├── architecture.md            # Schémas d'architecture
-│   └── screenshots/               # Captures d'écran
-│
-├── data/                          # 📊 Données locales
-│   └── sample/                    # Échantillons pour tests
-│
-└── pipeline/                      # 🔄 Configuration Pipeline
-    └── pipeline_config.json
+│   ├── silver/                    # Transformations et nettoyage
+│   └── gold/                      # Modèle dimensionnel
+└── docs/                          # Documentation
+    ├── architecture.md
+    └── screenshots/               # Captures d'écran du projet
 ```
 
 ---
@@ -248,7 +225,7 @@ Les rapports Power BI affichent :
 **Jawad Berrhili**
 
 📧 Contact : jawadberrhili@hotmail.fr
-🐙 GitHub : [@jawadberrhili](https://github.com/djak75)
+🐙 GitHub : [@Djak75](https://github.com/djak75)
 
 ---
 
@@ -263,7 +240,6 @@ Ce projet est réalisé dans un cadre pédagogique.
 - Formation Microsoft Fabric
 - Guillaume Soulat pour les données d'entraînement
 - Benjamin notre super formateur
-- Communauté Microsoft Fabric
 
 ---
 

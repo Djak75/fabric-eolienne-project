@@ -47,9 +47,6 @@ Thumbs.db
 *.csv
 *.parquet
 *.delta
-data/*.csv
-data/*.parquet
-!data/sample/*.csv
 
 # Logs
 *.log
